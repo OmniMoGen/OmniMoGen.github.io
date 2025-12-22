@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="OmniMoGen: Unifying Human Motion Generation via Learning from Interleaved Text-Motion Instructions">
+  <meta name="keywords" content="OmniMoGen, Motion Generation, Human Motion, Generative Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniMoGen</title>
+
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="stylesheet" href="./static/css/leaderboard.css"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+
+  <style>
+    .brand span:nth-child(1) {
+      color: #ff1010
+    }
+
+    .brand span:nth-child(2) {
+      color: #ffb805
+    }
+
+    .brand span:nth-child(3) {
+      color: #d1f006
+    }
+
+    .brand span:nth-child(4) {
+      color: #04bd26
+    }
+
+    .brand span:nth-child(5) {
+      color: #4eadea
+    }
+
+    .brand span:nth-child(6) {
+      color: #335e96
+    }
+
+    /* Brand styling from original OmniMoGen site */
+    .brand {
+      font-weight: bold;
+    }
+
+    .section-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    img.figure {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <!-- <img src="static/images/icon.png" style="width:1em;vertical-align: middle" alt="Logo"/> -->
+              <span class="brand">
+                <span>O</span><span>m</span><span>n</span><span>i</span><span>Mo</span><span>Gen</span>
+              </span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle">
+              Unifying Human Motion Generation via Learning from Interleaved Text–Motion Instructions
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="#">Wendong Bu</a><sup style="color:#1cc824;">1</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#">Kaihang Pan</a><sup style="color:#1cc824;">1</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#">Yuze Lin</a><sup style="color:#1cc824;">1</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#">Jiacheng Li</a><sup style="color:#c10cee;">2</sup>,</span>
+              <span class="author-block">
+                <a href="#">Kai Shen</a><sup style="color:#1cc824;">1</sup>,</span>
+              <br>
+              <span class="author-block">
+                <a href="#">Wenqiao Zhang</a><sup style="color:#1cc824;">1</sup>,</span>
+              <span class="author-block">
+                <a href="#">Juncheng Li</a><sup style="color:#1cc824;">1</sup><sup
+                  style="font-family: 'Times New Roman';">✉</sup>,</span>
+              <span class="author-block">
+                <a href="#">Jun Xiao</a><sup style="color:#1cc824;">1</sup>,</span>
+              <span class="author-block">
+                <a href="#">Siliang Tang</a><sup style="color:#1cc824;">1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup style="color:#1cc824;">1</sup>Zhejiang University,</span>
+              <span class="author-block"><sup style="color:#c10cee">2</sup>HiThink Research</span>
+              <br>
+              <span class="author-block"><sup>*</sup>Equal Contribution, <sup
+                  style="font-family: 'Times New Roman';">✉</sup>Corresponding Author</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2512.xxxxx" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                    </span>
+                    <span>X2Mo-137K (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Benchmark Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                    </span>
+                    <span>AnyContext (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABSTRACT ================= -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large language models (LLMs) have unified diverse linguistic tasks within a single framework, yet such
+              unification remains unexplored in human motion generation. Existing methods are confined to isolated
+              tasks, limiting flexibility for free-form and omni-objective generation.
+            </p>
+            <p>
+              To address this, we propose <b>OmniMoGen</b>, a unified framework that enables versatile motion generation
+              through interleaved text-motion instructions. Built upon a concise RVQ-VAE and transformer architecture,
+              OmniMoGen supports end-to-end instruction-driven motion generation.
+            </p>
+            <p>
+              We construct <b>X2Mo</b>, a large-scale dataset of over 137K interleaved text-motion instructions, and
+              introduce <b>AnyContext</b>, a benchmark for evaluating interleaved motion generation. Experiments show
+              that OmniMoGen achieves state-of-the-art performance on text-to-motion, motion editing, and AnyContext,
+              exhibiting emerging capabilities such as compositional editing, self-reflective generation, and
+              knowledge-informed generation. These results mark a step toward the next intelligent motion generation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OVERVIEW ================= -->
+  <section class="section">
+    <div class="container is-max-desktop content has-text-centered">
+      <h2 class="title is-3 section-title">Overview</h2>
+
+      <p class="has-text-justified">
+        OmniMoGen introduces a unified paradigm for human motion generation by modeling
+        interleaved text–motion instructions within a single autoregressive framework.
+        Instead of designing task-specific architectures, OmniMoGen treats motion as a
+        discrete language and learns to follow diverse motion-related instructions in a
+        unified manner.
+      </p>
+
+      <img src="static/images/intro.png" class="figure" width="92%">
+    </div>
+  </section>
+
+  <!-- ================= MODEL ================= -->
+  <section class="section">
+    <div class="container is-max-desktop content has-text-centered">
+      <h2 class="title is-3 section-title">Unified Architecture</h2>
+
+      <p class="has-text-justified">
+        OmniMoGen employs an RVQ-VAE to tokenize human motion into discrete units and
+        concatenates motion tokens with text tokens in a single sequence. A unified
+        autoregressive transformer is trained to model this interleaved sequence,
+        enabling omni-objective motion generation by instruction.
+      </p>
+
+      <img src="static/images/model.png" class="figure" width="92%">
+    </div>
+  </section>
+
+  <!-- ================= DATASET ================= -->
+  <section class="section">
+    <div class="container is-max-desktop content has-text-centered">
+      <h2 class="title is-3 section-title">X2Mo Dataset</h2>
+
+      <p class="has-text-justified">
+        We construct X2Mo, a large-scale dataset consisting of interleaved text–motion
+        instructions spanning in-context generation, motion editing, multi-turn editing,
+        and reflection. X2Mo provides structured supervision for learning unified motion
+        generation.
+      </p>
+
+      <img src="static/images/statistics.png" class="figure" width="88%">
+    </div>
+  </section>
+
+  <!-- ================= BENCHMARK ================= -->
+  <section class="section">
+    <div class="container is-max-desktop content has-text-centered">
+      <h2 class="title is-3 section-title">AnyContext Benchmark</h2>
+
+      <p class="has-text-justified">
+        AnyContext evaluates motion generation under complex interleaved contexts,
+        requiring models to selectively follow attributes from reference motions
+        according to textual instructions.
+      </p>
+
+      <img src="static/images/bench.png" class="figure" width="92%">
+    </div>
+  </section>
+
+  <!-- ================= EMERGING ================= -->
+  <section class="section">
+    <div class="container is-max-desktop content has-text-centered">
+      <h2 class="title is-3 section-title">Emerging Capabilities</h2>
+
+      <p class="has-text-justified">
+        Through unified training on interleaved instructions, OmniMoGen exhibits strong
+        emerging capabilities beyond basic generation, including compositional editing,
+        self-reflective refinement, and knowledge-informed motion synthesis.
+      </p>
+
+      <img src="static/images/emerging.png" class="figure" width="92%">
+    </div>
+  </section>
+
+  <!-- ================= QUALITATIVE ================= -->
+  <section class="section">
+    <div class="container is-max-desktop content has-text-centered">
+      <h2 class="title is-3 section-title">Qualitative Results</h2>
+
+      <h4 class="title is-5">Text-to-Motion</h4>
+      <img src="static/images/qualitative_t2m.png" class="figure" width="92%">
+
+      <h4 class="title is-5" style="margin-top:2rem;">Motion Editing</h4>
+      <img src="static/images/qualitative_edit.png" class="figure" width="92%">
+    </div>
+  </section>
+
+  <!-- ================= BIBTEX ================= -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered section-title">BibTeX</h2>
+      <pre><code>@article{bu2025omnimogen,
+  title   = {OmniMoGen: Unifying Human Motion Generation via Learning from Interleaved Text-Motion Instructions},
+  author  = {Bu, Wendong and Pan, Kaihang and Lin, Yuze and Li, Jiacheng and Shen, Kai and Zhang, Wenqiao and Li, Juncheng and Xiao, Jun and Tang, Siliang},
+  journal = {arXiv preprint},
+  year    = {2025}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p style="font-size:14px;">
+              This website is adapted from <a href="https://omni-bench.github.io/">OmniBench</a>, originally from <a
+                href="https://nerfies.github.io/">Nerfies</a>, licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
